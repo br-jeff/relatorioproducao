@@ -5,4 +5,5 @@ const port = 3000
 
 app.use(routes)
 
-app.listen(port, () => console.log(`Servidor na porta ${port}`))
+app.listen(port, 
+    () => console.log(`Servidor na porta ${port}`))

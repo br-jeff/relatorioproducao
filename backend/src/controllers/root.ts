@@ -1,9 +1,9 @@
 
-    function index(req,res) {
+function index(req,res) {
         res.send('teste controller INDEX')
     }
 
-    function stored(req,res) {
+function stored(req,res) {
         res.send('teste controller STORED')
     }
 
