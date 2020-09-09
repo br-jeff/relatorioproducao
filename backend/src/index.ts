@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const routes = require('./routes')
-const testDB = require('./database/testConnection')
+const testDB = require('./Database/Config/testConnection')
 const port = 3000
 
 testDB()
