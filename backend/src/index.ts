@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
+const routes = require('./routes')
 const port = 3000
 
-app.get('/',(req,res) =>  res.send('Hello') )
+app.use(routes)
 
-
-app.listen(port, () => `Servidor na porta ${port}`)
+app.listen(port, () => console.log(`Servidor na porta ${port}`))
