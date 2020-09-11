@@ -1,13 +1,13 @@
 const express = require('express')
 const app = express()
-const routes = require('./routes')
-const testDB = require('./Database/Config/testConnection')
+const auth = require('./routes/auth')
+//const testDB = require('./Database/Config/testConnection')
 const port = 3000
 
-testDB()
+//testDB()
 
+app.use('/auth',auth)
 
-app.use(routes)
 
 app.listen(port, 
     () => console.log(`Servidor na porta ${port}`))
