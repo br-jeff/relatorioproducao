@@ -1,6 +1,6 @@
 const router =  require('express').Router()
 const Users = require('../Database/Models/User')
-const register = require('../Controllers/RP/register')
+const register = require('../Controllers/App/register')
 
     router.post('/register',
         (req,res) => register(req,res) ) 
