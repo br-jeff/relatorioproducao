@@ -1,5 +1,4 @@
-
-function index(req,res) {
-    res.send('teste controller INDEX')
+function register(req,res) {
+    res.send('CONTROLERREGISTER')
 }
-module.exports = {index}
+module.exports = register

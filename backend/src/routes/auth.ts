@@ -1,12 +1,12 @@
 const router =  require('express').Router()
-const rootController = require('../controllers/root')
 const Users = require('../Database/Models/User')
+const login = require('../Controllers/RP/login')
 
     router.post('/register',
-     (req,res) => rootController.stored(req,res) ) 
+        (req,res) => login(req,res) ) 
 
      router.get('/login',
-     (req,res) => rootController.index(req,res) ) 
+         (req,res) => rootController.index(req,res) ) 
 
      
 module.exports =  router  
