@@ -3,11 +3,13 @@ const app = express()
 const auth = require('./routes/auth')
 //const testDB = require('./Database/Config/testConnection')
 const port = 3000
-const Users = require('./Database/Models/User')
+
 
 //testDB()
 
 app.use('/user',auth)
+
+app.use(express.json())
 
 
 app.listen(port, 
