@@ -14,8 +14,14 @@ const userLogin = async (req,res) => {
 
         const { login , password } = req.body
        
-        const findUser = await User.findAll()
+        const findUser = await User.findAll({
+                where: {
+                        login,
+                        password
+                }
+        })
         res.json(findUser)
+     
 }
 
 
