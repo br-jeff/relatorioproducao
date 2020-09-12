@@ -10,4 +10,9 @@ const User = require('../../Database/Models/User')
                         .then( res.send(`createUser`))
                         
         }
-        module.exports =  { register }  
+
+        const login = async (req,res) => {
+                res.send('teste')
+        }
+     
+        module.exports =  { register , login }  
