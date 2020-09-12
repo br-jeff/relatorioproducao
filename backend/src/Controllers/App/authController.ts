@@ -21,8 +21,13 @@ const userLogin = async (req,res) => {
                                 password
                         }
                 })
-                res.json(findUser)  
-        } else { res.json('Usuario ou senha nao podem ser nulos')}
+
+                if(findUser.length > 0 )  res.json(findUser)
+                else
+                res.json('Nao existem usuarios com esse login e senha')
+                
+        } 
+        else { res.json('Usuario ou senha nao podem ser nulos')}
                   
       
 }
