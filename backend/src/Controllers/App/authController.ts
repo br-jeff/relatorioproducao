@@ -1,6 +1,6 @@
 const User = require('../../Database/Models/User')   
    
-module.exports.registerUser = async (req,res)  => {
+const userRegister = async (req,res)  => {
         const { login , password } = req.body
         const createUser = await User.create({
                 login,
@@ -8,8 +8,10 @@ module.exports.registerUser = async (req,res)  => {
                 .then( res.send(`createUser`))
 }                
                 
+
+
+
                 
-                
-                
+module.exports = {userRegister}        
                
      
