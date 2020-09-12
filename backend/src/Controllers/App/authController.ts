@@ -23,16 +23,15 @@ const userLogin = async (req,res) => {
                 })
 
                 if(findUser.length > 0 ) {
-                        createToken(res, {id: 1} )
+                        const dataUser = findUser[0].dataValues
+                        createToken(res, dataUser )
                 } 
-               
                 else
                 res.json('Nao existem usuarios com esse login e senha')
                 
         } 
         else { res.json('Usuario ou senha nao podem ser nulos')}
-                  
-      
+                     
 }
 
 const createToken = (res,id : Object) => {
