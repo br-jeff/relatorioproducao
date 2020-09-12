@@ -22,7 +22,10 @@ const userLogin = async (req,res) => {
                         }
                 })
 
-                if(findUser.length > 0 )  res.json(findUser)
+                if(findUser.length > 0 ) {
+                        createToken(res, {id: 1} )
+                } 
+               
                 else
                 res.json('Nao existem usuarios com esse login e senha')
                 
@@ -31,6 +34,13 @@ const userLogin = async (req,res) => {
                   
       
 }
+
+const createToken = (res,id : Object) => {
+        jwt.sign( id ,"secretKey",
+        (err,token) => res.json(token))
+     
+}
+
 
 
                 
