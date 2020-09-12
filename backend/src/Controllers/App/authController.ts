@@ -1,3 +1,4 @@
+const { Op } = require("sequelize")
 const User = require('../../Database/Models/User')   
 const jwt = require('jsonwebtoken')
    
@@ -10,12 +11,13 @@ const userRegister = async (req,res) => {
 }                
                 
 const userLogin = async (req,res) => {
-        res.send('Login page')
+
+        const { login , password } = req.body
+       
+        const findUser = await User.findAll()
+        res.json(findUser)
 }
 
-const createToken = (id) => { 
-        return jwt.sing({ id },'segredo hash' )
-}
 
                 
 module.exports = {userRegister,userLogin}        
