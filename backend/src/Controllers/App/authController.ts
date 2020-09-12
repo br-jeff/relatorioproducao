@@ -16,6 +16,7 @@ const userLogin = async (req,res) => {
         
         if(login && password) {
                 const findUser = await User.findAll({
+                        attributes: ['id','login'],
                         where: {
                                 login,
                                 password
