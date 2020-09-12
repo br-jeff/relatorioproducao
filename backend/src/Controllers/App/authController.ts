@@ -13,15 +13,18 @@ const userRegister = async (req,res) => {
 const userLogin = async (req,res) => {
 
         const { login , password } = req.body
-       
-        const findUser = await User.findAll({
-                where: {
-                        login,
-                        password
-                }
-        })
-        res.json(findUser)
-     
+        
+        if(login && password) {
+                const findUser = await User.findAll({
+                        where: {
+                                login,
+                                password
+                        }
+                })
+                res.json(findUser)  
+        } else { res.json('Usuario ou senha nao podem ser nulos')}
+                  
+      
 }
 
 
