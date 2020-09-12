@@ -4,10 +4,19 @@ const jwt = require('jsonwebtoken')
    
 const userRegister = async (req,res) => {
         const { login , password } = req.body
-        const createUser = await User.create({
-                login,
-                password})
-                .then( res.send(`createUser`))
+
+        const findUser = await User.findOne({
+                attributes: ['id'],
+                where: { login }
+        })
+
+        if(!findUser) {
+                const createUser = await User.create({
+                        login,
+                        password})
+                        .then( res.send('Usuario Criado com sucesso') )
+        }
+        else res.send('Esse Login ja existe')
 }                
                 
 const userLogin = async (req,res) => {
