@@ -1,24 +1,21 @@
-const dbConfig = require('../Config/configDB')
-const Sequelize = require('sequelize')
-const sequelize = new Sequelize(dbConfig)
+const { Sequelize, DataTypes } = require('sequelize');
+const configDB = require('../Config/configDB')
+const sequelize = new Sequelize(configDB)
 
-const Users = sequelize.define('Users', {
-
-    nrecno: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-
+const User = sequelize.define('User', {
+    
+    login: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
-    login:{
-        type: Sequelize.STRING,
-    },
-    password:{
-        type: Sequelize.STRING,
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
 },
-{tableName: 'NODE_APP_USERS'} )
 
-Users.sync()
+{ tableName: 'NODE_APP_USUARIO' })
 
-module.exports = Users;
+User.sync()
+
+module.exports = User;

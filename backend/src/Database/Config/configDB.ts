@@ -4,4 +4,7 @@ module.exports = {
     database: 'teste',
     username: 'root',
     password: 'root',
+    define: {
+        timestamps: true,
+    }
 }
