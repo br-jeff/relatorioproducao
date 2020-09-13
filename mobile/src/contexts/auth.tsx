@@ -1,6 +1,12 @@
 import React, {createContext} from 'react'
 
-const AuthContext = createContext({logado: true});
+interface AuthContextData{
+    logado: boolean;
+    token: string;
+    user: object
+}
+
+const AuthContext = createContext<AuthContextData>( {} as AuthContextData);
 
 export const AuthProvider: React.FC = ( {children} ) => (
     <AuthContext.Provider value={{logado: false}}>
