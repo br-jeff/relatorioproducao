@@ -1,12 +1,12 @@
 import React, {createContext,useState,useEffect} from 'react'
-import {View,ActivityIndicator } from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage'
 import * as auth from '../services/auth'
 
 interface AuthContextData{
+    loading: boolean;
     logado: boolean;
-    user: object | null
-    singIn(): Promise<void>
+    user: object | null;
+    singIn(): Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextData>( {} as AuthContextData);
@@ -36,16 +36,10 @@ export const AuthProvider: React.FC = ( {children} ) => {
        await AsyncStorage.setItem('@rp:token',response.token)
     }
 
-    if (loading) {
-        return(
-            <View style={{flex: 1,justifyContent: 'center',alignItems: 'center'}}>
-                <ActivityIndicator size="large" color="#29f" />
-            </View>
-        )
-    }
+  
 
     return ( 
-        <AuthContext.Provider value={{logado: !!user,user,singIn}}>
+        <AuthContext.Provider value={{logado: !!user,user,singIn,loading}}>
             {children}
         </AuthContext.Provider>  
    )
