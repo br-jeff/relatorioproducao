@@ -1,7 +1,8 @@
 import React from 'react';
 import { View,Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler'
-import {singIn} from '../services/auth'
+import {singIn} from '../../services/auth'
+import AuthContext from '../../contexts/auth'
 
 
 const Login: React.FC = () => {
