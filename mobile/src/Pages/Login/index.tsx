@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { View,Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler'
 import {singIn} from '../../services/auth'
@@ -6,6 +6,9 @@ import AuthContext from '../../contexts/auth'
 
 
 const Login: React.FC = () => {
+
+    const { logado } = useContext(AuthContext)
+    console.log(logado)
 
      async function  handleSingIn() { 
         const response = await singIn()
