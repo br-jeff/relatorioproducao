@@ -37,7 +37,7 @@ const userLogin = async (req,res) => {
                         createToken(res, dataUser )
                 } 
                 else
-                res.json('Nao existem usuarios com esse login e senha')
+                res.json('Usuario ou senha invalido')
                 
         } 
         else { res.json('Usuario ou senha nao podem ser nulos')}
