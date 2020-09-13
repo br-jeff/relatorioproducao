@@ -7,12 +7,11 @@ import AuthContext from '../../contexts/auth'
 
 const Login: React.FC = () => {
 
-    const { logado } = useContext(AuthContext)
+    const { logado,singIn } = useContext(AuthContext)
     console.log(logado)
 
-     async function  handleSingIn() { 
-        const response = await singIn()
-        console.log(response)
+    function  handleSingIn() { 
+       singIn()
     }
 
     return (
