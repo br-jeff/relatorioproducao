@@ -1,4 +1,4 @@
-export default function singIn() { 
+export function singIn() { 
     return new Promise( resolve=> { 
         setTimeout( ()=> { 
             resolve({
@@ -7,6 +7,6 @@ export default function singIn() {
                     login: 'jefferson'
                 }
             })
-        },1000)
+        },100)
     } )
  }

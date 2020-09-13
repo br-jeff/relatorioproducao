@@ -1,15 +1,23 @@
 import React from 'react';
 import { View,Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler'
+import {singIn} from '../services/auth'
+
 
 const Login: React.FC = () => {
+
+     async function  handleSingIn() { 
+        const response = await singIn()
+        console.log(response)
+    }
+
     return (
      <View style={styles.container} >
          <View style={styles.moldura} >
             <TextInput style={styles.input}  placeholder=" Digite Seu usuario" />
                 <TextInput style={styles.input}  placeholder=" Digite Sua Senha" />
            
-               <RectButton style={styles.loginButton}>
+               <RectButton style={styles.loginButton} onPress={handleSingIn}>
                    <Text style={styles.loginText}> Login </Text>
                </RectButton>
             </View>
