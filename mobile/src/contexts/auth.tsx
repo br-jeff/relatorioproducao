@@ -1,5 +1,6 @@
 import React, {createContext,useState,useEffect} from 'react'
 import AsyncStorage from '@react-native-community/async-storage'
+import api from '../services/api'
 import * as auth from '../services/auth'
 
 interface AuthContextData{
@@ -21,6 +22,8 @@ export const AuthProvider: React.FC = ( {children} ) => {
          const storagedToken = await AsyncStorage.getItem('@rp:token')   
 
          if(storagedUser &&  storagedToken ) {
+             api.defaults.headers.Authorization = `Bearer ${storagedToken}`
+
              setUser(JSON.parse(storagedUser))
              setLoading(false)
          }
@@ -31,6 +34,8 @@ export const AuthProvider: React.FC = ( {children} ) => {
        const response = await auth.singIn()
 
        setUser(response.user)
+        api.defaults.headers['Authorization'] = `Bearer ${response.token}`
+
        console.log(JSON.stringify(response.user) +  response.token)
        await AsyncStorage.setItem('@rp:user',JSON.stringify(response.user))
        await AsyncStorage.setItem('@rp:token',response.token)
