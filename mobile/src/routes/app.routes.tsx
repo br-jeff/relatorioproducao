@@ -6,8 +6,10 @@ const AppStack = createStackNavigator()
 
 const AppRoutes: React.FC = () => {
     return ( 
-        <AppStack.Navigator>
-            <AppStack.Screen  name="Home" component={Home}  />
+        <AppStack.Navigator  screenOptions={{
+            headerShown: false
+          }}>
+            <AppStack.Screen  name="Home" component={Home}   />
         </AppStack.Navigator>
     )
 }
