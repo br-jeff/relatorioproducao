@@ -23,7 +23,7 @@ const Home: React.FC  = () => {
             </RectButton>
  
             <RectButton style={styles.button}>
-              <Text style={styles.textButton}> Atualizar </Text>
+              <Text style={styles.textButton}> Novo Relatorio </Text>
             </RectButton>
 
             <RectButton style={styles.button} >
