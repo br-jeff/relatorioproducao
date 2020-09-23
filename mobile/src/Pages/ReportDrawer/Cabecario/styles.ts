@@ -1,3 +1,4 @@
+import { ScrollView, TextInput } from 'react-native';
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
@@ -18,6 +19,14 @@ const styles = StyleSheet.create({
   textButton: {
     color: '#fff',
   },
+  ScrollView: {
+    flex: 1,
+  },
+  textInput: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#000',
+   
+  }
 })
 
 export default styles
