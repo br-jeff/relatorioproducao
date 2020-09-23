@@ -9,7 +9,7 @@ const AppStack = createStackNavigator()
 
 const AppRoutes: React.FC = () => {
   return (
-    <AppStack.Navigator>
+    <AppStack.Navigator  >
       <AppStack.Screen
         name="Home"
         component={Home}
@@ -21,7 +21,7 @@ const AppRoutes: React.FC = () => {
         options={{headerShown: false}}
       />
       <AppStack.Screen name="ReportRoutes" component={ReportRoutes} />
-    </AppStack.Navigator>
+    </AppStack.Navigator >
   );
 }
 

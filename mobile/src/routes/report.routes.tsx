@@ -12,7 +12,7 @@ const Tab = createBottomTabNavigator();
 const NewReportRoutes: React.FC = () => {
   return (
     <Tab.Navigator initialRouteName="Cabecario">
-      <Tab.Screen name="Cabecario" component={Cabecario} />
+      <Tab.Screen name="Cabecario"  component={Cabecario} />
       <Tab.Screen name="Equipes" component={Equipes} />
       <Tab.Screen name="Equipamentos" component={Equipamentos} />
       <Tab.Screen name="Materiais" component={Materiais} />
