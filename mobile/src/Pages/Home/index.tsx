@@ -9,8 +9,13 @@ import {useNavigation} from '@react-navigation/native';
 
 const Home: React.FC  = () => {
     const navigation = useNavigation()
+
     function navigateMoreOptions(){
         navigation.navigate('MoreOptions')
+    }
+
+    function navigateCabecario(){
+        navigation.navigate('NewReportRoutes')
     }
     return(
         <>
@@ -22,7 +27,7 @@ const Home: React.FC  = () => {
               <Text style={styles.textButton}> + </Text>
             </RectButton>
  
-            <RectButton style={styles.button}>
+            <RectButton style={styles.button} onPress={navigateCabecario}>
               <Text style={styles.textButton}> Novo Relatorio </Text>
             </RectButton>
 
