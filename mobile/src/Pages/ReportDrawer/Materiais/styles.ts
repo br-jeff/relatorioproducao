@@ -15,24 +15,9 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         justifyContent: "center"
     },
-    buttonLeft: {
-       marginLeft: 8,
-    },
     textButton:{
         color: '#fff',
-        fontSize: 18,
-        textAlign: 'center',
-        justifyContent: 'center',
-    },
-    dualButtonContainer: {
-        marginTop: 50,
-        justifyContent: 'center',
-        flexDirection: 'row',
-        width: '95%',
-        height: 20
-
     }
-
 })
 
 export default styles
