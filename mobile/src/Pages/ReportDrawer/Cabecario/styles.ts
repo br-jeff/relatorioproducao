@@ -4,10 +4,9 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    backgroundColor: '#fafafa',
+    backgroundColor: '#fff',
   },
   button: {
     width: '48%',
@@ -18,11 +17,6 @@ const styles = StyleSheet.create({
   },
   textButton: {
     color: '#fff',
-  },
-  ScrollView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   labelSelect :{
     fontSize: 16,
@@ -40,14 +34,6 @@ const styles = StyleSheet.create({
     fontSize:18,
     color: '#1060dd'
   },
-  cardView:{
-    marginTop: 8,
-    width: '95%',
-    backgroundColor: '#fff',
-    elevation: 1,
-    borderRadius: 4,
-  },
-
   dataInput:{
     width: '30%',
     color: '#1060dd'
@@ -55,12 +41,48 @@ const styles = StyleSheet.create({
   horaInput:{
     width: '15%',
     color: '#1060dd',
-
   },
   divLine:{
+    backgroundColor: '#fff',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  cardView:{
+    borderWidth: 0.5,
+    borderBottomColor: '#ccc',
+    borderRadius: 3,
+    marginTop: 10,
+    width: '90%',
+    padding: 2,
+  },
+  selectEng: {
+    width: '73%'
+  },
+  labelCenter:{
+    textAlign: "center"
+  },
+  longDescr:{
+    marginTop: 6,
+    marginBottom: 8,
+    borderWidth: 0.2,
+    borderColor: '#ccc',
+    color: '#333',
+    borderRadius: 3,
+    padding: 5,
+    backgroundColor: '#fff',
+    width: '95%',
+    fontSize:18,
+    color: '#1060dd',
+    minHeight:100,
+  },
+  viewPavimento:{
+    justifyContent: "center",
+    alignItems:"center",
+  },
+  scrollView: {
+     flex: 1,
+     width: '100%' ,
   }
 })
 
