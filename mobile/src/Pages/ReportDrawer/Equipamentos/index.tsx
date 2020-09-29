@@ -1,8 +1,9 @@
 import React from 'react'
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, InputText} from 'react-native';
 import styles from './styles';
 import {RectButton} from 'react-native-gesture-handler';
-
+//funcionario
+        //obs
 const Equipamentos: React.FC = () => {
   return (
     <View style={styles.container}>

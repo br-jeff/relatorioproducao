@@ -1,22 +1,20 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-    backgroundColor: '#fafafa',
+    backgroundColor: '#fff',
   },
   button: {
     width: '48%',
     height: 60,
     backgroundColor: '#1060dd',
     borderRadius: 8,
-    justifyContent: 'center',
+    textAlign: "center",
   },
   textButton: {
     color: '#fff',
+
   },
 })
 
